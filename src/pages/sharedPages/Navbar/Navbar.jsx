@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import tourImg from '../../../../public/tour3.png'
 
 const Navbar = () => {
     const { user, logOutUser } = useAuth();
@@ -33,7 +34,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className=" text-2xl">TouristGuide</a>
+                <a className=" text-2xl font-semibold flex flex-row items-center"><img className="w-8 h-8 " src={tourImg} alt="" /> InfiniteTour</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="space-x-6 menu-horizontal px-1 }">
