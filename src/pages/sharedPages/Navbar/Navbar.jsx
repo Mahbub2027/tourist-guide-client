@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
-import tourImg from '../../../../public/tour3.png'
+import tourImg from '/tour3.png';
 
 const Navbar = () => {
     const { user, logOutUser } = useAuth();
@@ -24,7 +24,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar  bg-base-100">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -48,7 +48,7 @@ const Navbar = () => {
                         <>
                             <details className="dropdown dropdown-end">
                                 <summary className="m-1 btn btn-circle"><img className="w-10 h-10 rounded-full mx-2" src={user?.photoURL} alt="" /></summary>
-                                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                                <ul className="p-2 shadow menu dropdown-content z-10 bg-base-100 rounded-box w-52">
                                 <li className="btn-disabled"><span>{user?.displayName}</span></li>
                                     <li className="btn-disabled"><span>{user?.email}</span></li>
                                     <hr />

@@ -1,0 +1,171 @@
+[
+    {
+        "id" : "1",    
+        "image": "https://i.ibb.co/Nr67J9V/st-martins-island-tour-bangladesh.jpg",
+        "tour_type": "beach",
+        "trip_title": "Adventure Awaits: Saint Martin Discovery Tour",
+        "price": "$1200",
+        "gallery_img_1": "https://i.ibb.co/cc64f1p/st-martin.jpg",
+        "gallery_img_2": "https://i.ibb.co/JC06z5h/Saint-martin-s-island.jpg",
+        "about_tour": "Welcome to our enchanting 'Sun-Kissed Bliss: Saint Martin Island Adventure'! Embark on a journey of tropical delight as we explore the breathtaking landscapes and vibrant culture of Saint Martin.Whether you're a beach lover, a culture enthusiast, or an avid explorer, Saint Martin has something magical for everyone. Join us on this island escape and create memories that will last a lifetime!",
+        "tour_plan_1": "Arrive in Saint Martin and check-in to your beachfront accommodation.",
+        "tour_plan_2": "Visit cultural landmarks such as Fort Louis and Marigot Market. Immerse yourself in the island's rich history and vibrant local life.",
+        "tour_plan_3": "Gather for a farewell dinner, sharing stories and memories from the trip. Optionally, join a beach bonfire for a magical farewell evening under the stars."
+      
+    },
+    {
+        "id" : "2", 
+        "image": "https://i.ibb.co/PmgDHVb/360-F-494056979-Pye-IPy-JMSMtagg-Cxa-Keeuq-ZAHfa3wygu.jpg",
+        "tour_type": "hills",
+        "trip_title": "Journey through Indigenous Bandarban",
+        "price": "$1500",
+        "gallery_img_1": "https://i.ibb.co/nRmWyn8/maxresdefault.jpg",
+        "gallery_img_2": "https://i.ibb.co/GMDRMJN/204-36376273530-3c9a0335f5-b-copyjpg.jpg",
+        "about_tour": "Welcome to our enchanting 'Mystical Bandarban: Hills, Tribes, and Tranquility' tour! Immerse yourself in the natural wonders and rich cultural tapestry of Bandarban, Bangladesh. This journey takes you through lush green hills, picturesque landscapes, and the vibrant traditions of indigenous tribes.Whether you seek adventure, cultural immersion, or serene escapes, our Bandarban tour promises an unforgettable experience amidst the tranquil beauty of the hills.",
+        "tour_plan_1": "Arrive in Bandarban and check into your hillside accommodation.",
+        "tour_plan_2": "Venture into the hills to visit indigenous tribal villages like the Marma or Mro, gaining insights into their customs and traditions.",
+        "tour_plan_3": "Embark on a trek to the mesmerizing Boga Lake, surrounded by hills and forests. Enjoy the serene atmosphere and take in the stunning scenery."
+        
+    },
+    {
+        "id" : "3", 
+        "image": "https://i.ibb.co/n7Rt7ds/1280px-Bholaganj-Sada-Pathor.jpg",
+        "tour_type": "nature",
+        "trip_title": "Discovering Enchantment: Sadapathor Exploration",
+        "price": "$800",
+        "gallery_img_1": "https://i.ibb.co/1QgF4dj/sadapathor.jpg",
+        "gallery_img_2": "https://i.ibb.co/nC6HSk3/sadapathor6.jpg",
+        "about_tour": "Welcome to our exclusive tour of Sadapathor, where every step unveils a unique blend of nature, culture, and hidden treasures. Immerse yourself in the serenity of untouched landscapes, discover the warmth of the local community, and witness the charm of this hidden gem.",
+        "tour_plan_1": "Arrive and enjoy a light breakfast surrounded by the tranquility of nature.",
+        "tour_plan_2": " Explore the lush landscapes with a nature walk. Capture the beauty of the flora and fauna unique to Sadapathor.",
+        "tour_plan_3": "Reflect on the day's experiences. Optionally, visit a tea garden or another natural attraction in the area."
+      
+    },
+    {
+        "id" : "4", 
+        "image": "https://i.ibb.co/vV3TSpW/Visit-Bangladesh-09.jpg",
+        "tour_type": "beach",
+        "trip_title": "Cox's bazar: Sun, Sea, and Serenity",
+        "price": "$1500",
+        "gallery_img_1": "https://i.ibb.co/jL0TcfP/cox-baazar.jpg",
+        "gallery_img_2": "https://i.ibb.co/QCFtZWr/Cox-s-Bazaar-Sunset-Sep2019.jpg",
+        "about_tour": "Welcome to our enchanting 'Sunset Magic: A Romantic Retreat in Cox's bazar'! Embark on a journey of tropical delight as we explore the breathtaking landscapes and vibrant culture of Cox's bazar. Immerse yourself in the azure waters, unwind on pristine beaches, and savor the local cuisine. This tour is crafted for those seeking a perfect blend of relaxation and adventure. Whether you're a beach lover, a culture enthusiast, or an avid explorer, Cox's bazar has something magical for everyone. Join us on this island escape and create memories that will last a lifetime!",
+        "tour_plan_1": "Arrive in Cox's bazar and check-in to your beachfront accommodation.",
+        "tour_plan_2": "Explore Inani Beach, a quieter and less crowded beach with pristine surroundings.",
+        "tour_plan_3": "Visit the Burmese Market for souvenirs and local crafts.Enjoy the sunset at Cox's Bazar Beach"
+        
+    },
+    {
+        "id" : "5", 
+        "image": "https://i.ibb.co/SQWjBpX/27715467586-81cf9c0141-b.jpg",
+        "tour_type": "archaeological",
+        "trip_title": "Journey through Mahasthangar",
+        "price": "$1250",
+        "gallery_img_1": "https://i.ibb.co/cr5xwY5/99.jpg",
+        "gallery_img_2": "https://i.ibb.co/qdHyfHs/1200px-Mahasthangar-Museum-Bogra-Bangladesh-9.jpg",
+        "about_tour": "Embark on a captivating journey through time as you explore the ancient archaeological site of Mahasthangarh in Bangladesh. This tour is an immersive experience that unravels the rich history and cultural heritage of the region over the course of three days.",
+        "tour_plan_1": "Arrive in Bogura, the gateway to Mahasthangarh. Check-in to your chosen accommodation and freshen up.",
+        "tour_plan_2": "Visit Vasu Vihara, an ancient Buddhist monastery located near Mahasthangarh. ",
+        "tour_plan_3": "Check out from your accommodation and head towards Paharpur, home to the ancient Buddhist Vihara."
+        
+    },
+    {
+        "id" : "6", 
+        "image": "https://i.ibb.co/y5gyq4z/BDEf3c-G69-N.webp",
+        "tour_type": "nature",
+        "trip_title": "Exploring Sadaphator in Sylhet",
+        "price": "$800",
+        "gallery_img_1": "https://i.ibb.co/DMQ9Mzb/photo-1682696940597-0d9f06193aae-ixlib-rb-4-0.jpg",
+        "gallery_img_2": "https://i.ibb.co/nC6HSk3/sadapathor6.jpg",
+        "about_tour": "Welcome to our exclusive tour of Sadapathor, where every step unveils a unique blend of nature, culture, and hidden treasures. Immerse yourself in the serenity of untouched landscapes, discover the warmth of the local community, and witness the charm of this hidden gem.",
+        "tour_plan_1": "Arrive and enjoy a light breakfast surrounded by the tranquility of nature.",
+        "tour_plan_2": " Explore the lush landscapes with a nature walk. Capture the beauty of the flora and fauna unique to Sadapathor.",
+        "tour_plan_3": "Reflect on the day's experiences. Optionally, visit a tea garden or another natural attraction in the area."
+      
+    },
+    {
+        "id" : "7",    
+        "image": "https://i.ibb.co/9gbstmS/awsm-but-need-a-lot-of.jpg",
+        "tour_type": "nature",
+        "trip_title": "Tea Trails and Tranquility: Sreemangal Escape",
+        "price": "$1000",
+        "gallery_img_1": "https://i.ibb.co/J23qgmR/d715f1f8b2374ab78f35586b91472f30.jpg",
+        "gallery_img_2": "https://i.ibb.co/hC9g862/SOHIui-Hunsq-HEEQFzmrz.jpg",
+        "about_tour": "Embark on a captivating journey to Sreemangal, nestled in the lush landscapes of the Sylhet division in Bangladesh. This enchanting tour, named 'Tea Trails and Tranquility,' invites you to explore the unique blend of nature's beauty and cultural richness that defines Sreemangal.",
+        "tour_plan_1": "Explore Lawachara National Park, known for its rich biodiversity and wildlife. You may spot various species of monkeys, birds, and other animals.",
+        "tour_plan_2": "Visit the numerous tea estates in the region, such as the famous Tea Research Institute of Bangladesh.",
+        "tour_plan_3": "Explore the nearby Ham Ham Waterfall, surrounded by lush greenery. It's a great spot for nature lovers and photographers."
+      
+    },
+    {
+        "id" : "8", 
+        "image": "https://i.ibb.co/wdnYPPg/sajek.jpg",
+        "tour_type": "hills",
+        "trip_title": "Sajek: Nature's Melody in the Hills",
+        "price": "$2190",
+        "gallery_img_1": "https://i.ibb.co/Y7r1pCg/Sajek-1024x600-jpg.webp",
+        "gallery_img_2": "https://i.ibb.co/F040Z2j/3ba0739d-f91a-4ef2-b082-ed6e62672aa1.jpg",
+        "about_tour": "Embark on a soul-soothing journey to Sajek Valley, an enchanting highland retreat nestled in the hills of Bangladesh. This meticulously crafted 3-day tour promises a perfect blend of natural beauty, cultural exploration, and relaxation in the heart of the picturesque Sajek.",
+        "tour_plan_1": "Start your journey towards Sajek Valley. The road to Sajek is scenic, offering breathtaking views of hills and landscapes.",
+        "tour_plan_2": "Explore the beauty of Sajek Valley. Visit Konglak Hills, Hawa Cottage, and the Ruilui Para village to interact with the local indigenous communities.",
+        "tour_plan_3": "Return to your accommodation and unwind around a bonfire. Experience the magic of the night sky in the serene atmosphere of Sajek."
+        
+    },
+    {
+        "id" : "9", 
+        "image": "https://i.ibb.co/BjKGw3B/4493146-Sundarbans-Royal-Bengal-Tiger.jpg",
+        "tour_type": "advanture",
+        "trip_title": "Thrills in the Sundarbans Jungle",
+        "price": "$1800",
+        "gallery_img_1": "https://i.ibb.co/sH8mn9D/f7b1f34b09ccb54223cace43f33ca55b.jpg",
+        "gallery_img_2": "https://i.ibb.co/qWLtY0m/site-0798-0001-1200-630-20090910161220.jpghttps://i.ibb.co/qWLtY0m/site-0798-0001-1200-630-20090910161220.jpg",
+        "about_tour": "Embark on an exhilarating journey into the wild with our 'Thrills in the Sundarbans Jungle' tour. This carefully crafted adventure tour is designed for thrill-seekers and nature enthusiasts eager to explore the untamed beauty of the world's largest mangrove forest.",
+        "tour_plan_1": "Arrive at the gateway to the Sundarbans. After a warm welcome, get briefed on the adventure ahead, safety guidelines, and the unique flora and fauna of the Sundarbans.",
+        "tour_plan_2": " Start the day with an exciting kayaking adventure, navigating the narrow water channels surrounded by dense mangrove forests. Witness the sunrise over the delta.",
+        "tour_plan_3": "Bid farewell to the Sundarbans, taking with you memories of an unforgettable adventure. Depart from the gateway, carrying the spirit of the delta in your heart."
+      
+    },
+    {
+        "id" : "10", 
+        "image": "https://i.ibb.co/TWL9vBr/cox-s.jpg",
+        "tour_type": "beach",
+        "trip_title": "Cox's bazar: Sun, Sea, and Serenity",
+        "price": "$2000",
+        "gallery_img_1": "https://i.ibb.co/7pdcjpD/Longest-beah-in-the-world-2.jpg",
+        "gallery_img_2": "https://i.ibb.co/QCFtZWr/Cox-s-Bazaar-Sunset-Sep2019.jpg",
+        "about_tour": "Welcome to our enchanting 'Sunset Magic: A Romantic Retreat in Cox's bazar'! Embark on a journey of tropical delight as we explore the breathtaking landscapes and vibrant culture of Cox's bazar. Immerse yourself in the azure waters, unwind on pristine beaches, and savor the local cuisine. This tour is crafted for those seeking a perfect blend of relaxation and adventure. Whether you're a beach lover, a culture enthusiast, or an avid explorer, Cox's bazar has something magical for everyone. Join us on this island escape and create memories that will last a lifetime!",
+        "tour_plan_1": "Arrive in Cox's bazar and check-in to your beachfront accommodation.",
+        "tour_plan_2": "Explore Inani Beach, a quieter and less crowded beach with pristine surroundings.",
+        "tour_plan_3": "Visit the Burmese Market for souvenirs and local crafts.Enjoy the sunset at Cox's Bazar Beach"
+        
+    },
+    {
+        "id" : "11", 
+        "image": "https://i.ibb.co/6cMDT1R/585670df4d00f-1482059999-compressed.jpg",
+        "tour_type": "hills",
+        "trip_title": "Journey through Indigenous Bandarban",
+        "price": "$1500",
+        "gallery_img_1": "https://i.ibb.co/nRmWyn8/maxresdefault.jpg",
+        "gallery_img_2": "https://i.ibb.co/3smhQnW/380.jpg",
+        "about_tour": "Welcome to our enchanting 'Mystical Bandarban: Hills, Tribes, and Tranquility' tour! Immerse yourself in the natural wonders and rich cultural tapestry of Bandarban, Bangladesh. This journey takes you through lush green hills, picturesque landscapes, and the vibrant traditions of indigenous tribes.Whether you seek adventure, cultural immersion, or serene escapes, our Bandarban tour promises an unforgettable experience amidst the tranquil beauty of the hills.",
+        "tour_plan_1": "Arrive in Bandarban and check into your hillside accommodation.",
+        "tour_plan_2": "Venture into the hills to visit indigenous tribal villages like the Marma or Mro, gaining insights into their customs and traditions.",
+        "tour_plan_3": "Embark on a trek to the mesmerizing Boga Lake, surrounded by hills and forests. Enjoy the serene atmosphere and take in the stunning scenery."
+        
+    },
+    {
+        "id" : "12", 
+        "image": "https://i.ibb.co/ZzwX98x/60ebcfe6aaa33027254823.jpg",
+        "tour_type": "nature",
+        "trip_title": "Discovering Ratargul-Swamp-Forest",
+        "price": "$800",
+        "gallery_img_1": "https://i.ibb.co/0M7qKBp/2560px-Ratargul-Swamp-Forest-Sylhet-Bangladesh.jpg",
+        "gallery_img_2": "https://i.ibb.co/dcb7KHs/Ratargul-Swamp-Forest-7-1024x683.jpg",
+        "about_tour": "Welcome to our exclusive tour of Ratargul-Swamp-Forest, where every step unveils a unique blend of nature, culture, and hidden treasures. Immerse yourself in the serenity of untouched landscapes, discover the warmth of the local community, and witness the charm of this hidden gem.",
+        "tour_plan_1": "Arrive and enjoy a light breakfast surrounded by the tranquility of nature.",
+        "tour_plan_2": " Explore the lush landscapes with a nature walk. Capture the beauty of the flora and fauna unique to Ratargul-Swamp-Forest.",
+        "tour_plan_3": "Reflect on the day's experiences. Optionally, visit a tea garden or another natural attraction in the area."
+      
+    }
+  ]
+  

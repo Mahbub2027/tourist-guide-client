@@ -12,7 +12,7 @@ import slide4 from '../../../assets/banner/tea.jpg';
 const Banner = () => {
     return (
         <div>
-            <h2>Banner</h2>
+            {/* <h2>Banner</h2> */}
             <Swiper
                 slidesPerView={'auto'}
                 autoplay={{
