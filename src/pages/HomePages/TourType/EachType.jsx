@@ -1,20 +1,15 @@
-// import { useEffect, useState } from "react";
+// import { useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 
-const AllPackages = () => {
+const EachType = () => {
+    // const {_id, image, tour_type, trip_title, price, gallery_img_1, gallery_img_2, about_tour, tour_plan_1, tour_plan_2, tour_plan_3 } = useLoaderData();
     const axiosPublic = useAxiosPublic();
-    // const [packages, setPackages] = useState([])
-    // useEffect(() => {
-    //     fetch('packages.json')
-    //         .then(res => res.json())
-    //         .then(data => setPackages(data))
-    // }, [])
     const {data: packages=[]} = useQuery({
         queryKey: ['package'],
         queryFn: async () =>{
-            const res = await axiosPublic.get('/packages')
+            const res = await axiosPublic.get(`/packages/tour_type/${packages.tour_type}`)
             return res.data
         }
     })
@@ -36,12 +31,11 @@ const AllPackages = () => {
                             <Link to={`/packagesDetails/${pack._id}`}><div className="btn btn-accent">View Details</div></Link>
                         </div>
                     </div>
-                </div>)
-            }
+                </div>
+           )}
             </div>
         </div>
-    )
+    );
+};
 
-
-}
-export default AllPackages;
+export default EachType;

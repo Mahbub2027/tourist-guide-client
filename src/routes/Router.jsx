@@ -6,6 +6,7 @@ import SignUp from "../pages/auth/SignUp";
 import Blog from "../pages/BlogPages.jsx/Blog";
 import AllPackages from "../pages/AllPackages/AllPackages";
 import PackageDetails from "../pages/PackageDetails/PackageDetails";
+import EachType from "../pages/HomePages/TourType/EachType";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
           path: 'packagesDetails/:id',
           element: <PackageDetails></PackageDetails>,
           loader: ({params}) => fetch(`http://localhost:5000/packages/${params.id}`)
+        },
+        {
+          path: 'eachType/:tour_type',
+          element: <EachType></EachType>,
+          loader: ({params})=> fetch(`http://localhost:5000/packages/tour_type/${params.tour_type}`)
         },
         {
             path: '/login',

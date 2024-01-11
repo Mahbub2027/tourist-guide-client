@@ -21,7 +21,7 @@ const OurPackages = () => {
     return (
         <div className="w-11/12 mx-auto my-12">
             {/* <h2>Our Packages {packages.length}</h2> */}
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {
                 packages.slice(0,4).map(pack=> <div key={pack._id} className="card bg-base-100 shadow-xl">
                 <figure><img className="w-full h-44" src={pack.image} alt="Shoes" /></figure>
