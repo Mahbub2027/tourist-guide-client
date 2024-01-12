@@ -7,6 +7,8 @@ import Blog from "../pages/BlogPages.jsx/Blog";
 import AllPackages from "../pages/AllPackages/AllPackages";
 import PackageDetails from "../pages/PackageDetails/PackageDetails";
 import EachType from "../pages/HomePages/TourType/EachType";
+import AllStories from "../pages/HomePages/TouristStory/AllStories";
+import StoryDetails from "../pages/HomePages/TouristStory/StoryDetails";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,15 @@ const router = createBrowserRouter([
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/allStories',
+          element: <AllStories></AllStories>
+        },
+        {
+          path: '/storiesDetails/:id',
+          element: <StoryDetails></StoryDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/stories/${params.id}`)
         },
         {
           path: '/allPackages',
