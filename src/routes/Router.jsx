@@ -9,6 +9,10 @@ import PackageDetails from "../pages/PackageDetails/PackageDetails";
 import EachType from "../pages/HomePages/TourType/EachType";
 import AllStories from "../pages/HomePages/TouristStory/AllStories";
 import StoryDetails from "../pages/HomePages/TouristStory/StoryDetails";
+import Dashboard from "../layout/Dashboard";
+import TouristProfile from "../pages/Dashboard/Tourist/TouristProfile/TouristProfile";
+import TouristBooking from "../pages/Dashboard/Tourist/TouristBooking/TouristBooking";
+import TouristWishlist from "../pages/Dashboard/Tourist/TouristWishlist/TouristWishlist";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +60,25 @@ const router = createBrowserRouter([
         },
       ]
     },
+    
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'touristProfile',
+          element: <TouristProfile></TouristProfile>
+        },
+        {
+          path: 'touristBooking',
+          element: <TouristBooking></TouristBooking>
+        },
+        {
+          path: 'touristWishlist',
+          element: <TouristWishlist></TouristWishlist>
+        },
+      ]
+    }
   ]);
   
 

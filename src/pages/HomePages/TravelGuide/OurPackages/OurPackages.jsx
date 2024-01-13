@@ -2,15 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 // import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
+import { FaRegHeart } from "react-icons/fa";
+// import { useState } from "react";
 
 const OurPackages = () => {
-    // const [packages, setPackages] = useState([]);
+
     const axiosPublic = useAxiosPublic();
-    // useEffect(() => {
-    //     fetch('packages.json')
-    //         .then(res => res.json())
-    //         .then(data => setPackages(data))
-    // }, [])
+
     const {data: packages=[]} = useQuery({
         queryKey: ['package'],
         queryFn: async () =>{
@@ -18,6 +16,16 @@ const OurPackages = () => {
             return res.data
         }
     })
+
+    const handleMyWishlist = id =>{
+        const {image, title, tour_type, price} = id;
+        console.log("my wishlist", id)
+        const myWishlist = {
+            //
+        }
+        
+    }
+
     return (
         <div className="w-11/12 mx-auto my-12">
             {/* <h2>Our Packages {packages.length}</h2> */}
@@ -25,6 +33,10 @@ const OurPackages = () => {
             {
                 packages.slice(0,4).map(pack=> <div key={pack._id} className="card bg-base-100 shadow-xl">
                 <figure><img className="w-full h-44" src={pack.image} alt="Shoes" /></figure>
+                <div className="absolute right-1 top-1">
+                        <button onClick={()=>handleMyWishlist(pack._id)} className="btn"><FaRegHeart className="w-8 h-8"></FaRegHeart></button>
+                        {/* {showHeartIcons ? {showHeartIcons?<FaHeart className="w-8 h-8" /> :   : <FaRegHeart></FaRegHeart>} */}
+                </div>
                 <div className="relative card-body">
                     <div className="flex flex-row justify-between mb-10">
                         <div className="text-lg font-semibold text-left">{pack.trip_title}</div>

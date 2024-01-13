@@ -18,14 +18,14 @@ const TourType = () => {
             <div className="flex flex-wrap justify-center gap-7">
                 {
                     tourTypes.slice(0, 5).map((tourType, idx) => <Link key={idx} to={`/eachType/${tourType.tour_type}`}>
-                        {/* <div className=" my-10"> */}
+                      
                         <div className="flex flex-col items-center my-10">
                             <img className="w-32 h-32 rounded-full" src={tourType?.image} alt="" />
                             <p className="capitalize my-1">{tourType.tour_type}</p>
 
                         </div>
 
-                        {/* </div> */}
+                       
                     </Link>)
                 }
             </div>

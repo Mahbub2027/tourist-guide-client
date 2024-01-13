@@ -2,11 +2,13 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import GoogleLogin from "../sharedPages/SocialLinks/GoogleLogin";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const SignUp = () => {
-    const {register,handleSubmit,formState: { errors },} = useForm()
+    const {register,handleSubmit,reset, formState: { errors },} = useForm()
     const {createUser,updateUser} = useAuth();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     const onSubmit = (data) => {
         console.log(data)
@@ -18,7 +20,20 @@ const SignUp = () => {
             updateUser(data.name, data.photo)
             .then(()=>{
                 // send database
-                navigate('/')
+                const userInfo = {
+                    name : data.name,
+                    email : data.email,
+                }
+                axiosPublic.post('/users', userInfo)
+                .then(res=> {
+                    if(res.data.insertedId){
+                        console.log('user data inserted')
+                        reset();
+                        navigate('/')
+                    }
+                })
+                .catch(error=> {console.log(error)})
+                // navigate('/')
             })
             .catch(error=>{
                 console.log(error)

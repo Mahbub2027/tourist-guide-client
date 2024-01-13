@@ -1,16 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { FcGoogle } from "react-icons/fc";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const GoogleLogin = () => {
     const {googleUser} = useAuth();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     const handleGoogleLogin = ()=>{
         googleUser()
         .then(res=>{
             console.log(res.user)
-            navigate('/');
+            const userInfo = {
+                name: res.user.displayName,
+                email: res.user.email
+            }
+            axiosPublic.post('/users', userInfo)
+            .then(res=> {
+                console.log(res.data)
+                navigate('/');
+            })
+            
         })
         .catch(error=>{
             console.log(error)

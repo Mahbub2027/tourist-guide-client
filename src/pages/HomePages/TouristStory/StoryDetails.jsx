@@ -1,18 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
-// import { useLoaderData } from "react-router-dom";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { useLoaderData } from "react-router-dom";
 
 const StoryDetails = () => {
     const { name, title, image, story, date } = useLoaderData();
-    // const axiosPublic = useAxiosPublic();
-    // const {data: touristStory=[]} = useQuery({
-    //     queryKey: ['stories', touristStory?._id],
-    //     queryFn: async () => {
-    //         const res = await axiosPublic.get(`/stories/${touristStory._id}`)
-    //         return res.data;
-    //     }
-    // })
     return (
         <div>
             <figure><img className="w-full h-[420px]" src={image} alt="" /></figure>
