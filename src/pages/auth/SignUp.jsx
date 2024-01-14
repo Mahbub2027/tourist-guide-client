@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import GoogleLogin from "../sharedPages/SocialLinks/GoogleLogin";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const SignUp = () => {
     const {register,handleSubmit,reset, formState: { errors },} = useForm()
@@ -29,6 +30,13 @@ const SignUp = () => {
                     if(res.data.insertedId){
                         console.log('user data inserted')
                         reset();
+                        Swal.fire({
+                            position: "top",
+                            icon: "success",
+                            title: "Registration successful",
+                            showConfirmButton: false,
+                            timer: 1500
+                          });
                         navigate('/')
                     }
                 })

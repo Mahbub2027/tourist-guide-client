@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import GoogleLogin from "../sharedPages/SocialLinks/GoogleLogin";
+import Swal from "sweetalert2";
 
 const Login = () => {
     const {loginUser} = useAuth();
@@ -17,6 +18,13 @@ const Login = () => {
         loginUser(email, password)
         .then(res=>{
             console.log(res.user)
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "Login successful",
+                showConfirmButton: false,
+                timer: 1500
+              });
             navigate('/')
 
         })

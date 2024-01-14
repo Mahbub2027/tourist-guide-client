@@ -11,7 +11,7 @@ const PrivateRoutes = ({children}) => {
     if(loading){
         return <progress className="progress w-56"></progress>
     }
-    return <Navigate to='/login' state={{form: location}} replace></Navigate>
+    return <Navigate to='/login' state={{from: location}} replace></Navigate>
 };
 
 export default PrivateRoutes;

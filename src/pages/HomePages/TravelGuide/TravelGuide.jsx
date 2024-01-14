@@ -1,8 +1,9 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Overview from './Overview/Overview';
-import OurPackages from './OurPackages/OurPackages';
+// import OurPackages from './OurPackages/OurPackages';
 import MeetTourGuide from './MeetTourGuide/MeetTourGuide';
+import Packages from './OurPackages/Packages';
 
 
 const TravelGuide = () => {
@@ -21,7 +22,8 @@ const TravelGuide = () => {
                     <Overview></Overview>
                 </TabPanel>
                 <TabPanel>
-                    <OurPackages></OurPackages>
+                    <Packages></Packages>
+                    {/* <OurPackages></OurPackages> */}
                 </TabPanel>
                 <TabPanel>
                     <MeetTourGuide></MeetTourGuide>
