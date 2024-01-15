@@ -1,11 +1,12 @@
-// import { useState } from "react";
-// import ReactDatePicker from "react-datepicker";
+import { useState } from "react";
+import ReactDatePicker from "react-datepicker";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import "react-datepicker/dist/react-datepicker.css";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { useQuery } from "@tanstack/react-query";
 
 
 const BookingForm = () => {
@@ -13,8 +14,17 @@ const BookingForm = () => {
     const { price, trip_title } = useLoaderData();
     const { user } = useAuth();
     const navigate = useNavigate();
-    // const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState(new Date());
     const { register, handleSubmit } = useForm()
+
+    
+    const { data: guides = [] } = useQuery({
+        queryKey: ['guide'],
+        queryFn: async () => {
+            const res = await axiosPublic.get('/tourGuides')
+            return res.data;
+        }
+    })
 
     const onSubmit = async (data) => {
         console.log(data)
@@ -24,8 +34,9 @@ const BookingForm = () => {
             image: data.image,
             price: data.price,
             guide: data.guide,
-            date: data.date,
+            date: startDate.toISOString().split("T")[0],
             packageName: data.packageName,
+            status: "In review"
         }
         axiosPublic.post('/bookings', bookingInfo)
             .then(res => {
@@ -138,10 +149,17 @@ const BookingForm = () => {
                         <select defaultValue='default' {...register("guide")}
                             className="select select-bordered w-full ">
                             <option disabled value='default'>Select your Tour Guide</option>
-                            <option value="sakib">Sakib</option>
+                            {
+                                guides.map(guide=> <option key={guide._id}>
+                                    {guide?.name}
+                                </option>)
+                            }
+                            
+                            
+                            {/* <option value="sakib">Sakib</option>
                             <option value="mahfuz">Mahfuz</option>
                             <option value="abid">Abid</option>
-                            <option value="tahmid">Tahmid</option>
+                            <option value="tahmid">Tahmid</option> */}
 
 
                         </select>
@@ -150,12 +168,13 @@ const BookingForm = () => {
                         <div className="label">
                             <span className="label-text">Select Date*</span>
                         </div>
-                        <input {...register("date")} type="date" className="input input-bordered w-full" />
-                        {/* <ReactDatePicker type='date' {...register('date')}
-                        className="border-2 p-2 input w-full rounded-lg"
+                        {/* <input {...register("date")} type="date" className="input input-bordered w-full" /> */}
+                        <ReactDatePicker  
+                        className=" p-2 input input-bordered w-full rounded-lg"
+                            name="date"
                             selected={startDate} 
-                            onSelect={}
-                            onChange={(date) => setStartDate(date)} /> */}
+                            startDate={startDate ? startDate.toISOString().split("T")[0] : ""}
+                            onChange={(date) => setStartDate(date)} />
                     </label>
                 </div>
                 <div>

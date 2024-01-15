@@ -21,12 +21,12 @@ const MeetTourGuide = () => {
                     guides.slice(0,4).map(guide => <div key={guide._id}
                         className="card  bg-base-100 shadow-xl">
                         <figure><img className="w-28 h-28 rounded-full mx-auto" src={guide.image} alt="Shoes" /></figure>
-                        <div className="card-body text-left">
+                        <div className="card-body text-center">
                             <h2 className="text-2xl font-semibold">{guide.name}</h2>
                             <p className="">Experience: {guide.experience}</p>
                             <p className="">Contact: {guide.contact}</p>
-                            <div className="card-actions justify-end">
-                                <Link to={`/guideProfileDeatils/${guide._id}`}><button className="btn btn-accent">View Profile</button></Link>
+                            <div className="card-actions justify-center">
+                                <Link to={`/guideProfileDeatils/${guide._id}`}><button className="btn btn-accent mt-5">Details</button></Link>
                             </div>
                         </div>
                     </div>)

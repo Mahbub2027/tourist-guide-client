@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <li className="btn-disabled"><span>{user?.displayName}</span></li>
                                     <li className="btn-disabled"><span>{user?.email}</span></li>
                                     <hr />
-                                    <li><Link to='/dashboard'>Dashboard</Link></li>
+                                    <li><Link to='/dashboard/profile'>Dashboard</Link></li>
                                     <li><button onClick={handleLogOut} className=""><Link>Logout</Link></button></li> 
                                 </ul>
                             </details>
@@ -61,7 +61,7 @@ const Navbar = () => {
                             <button className="btn btn-secondary px-5"><Link to='/login'>Logout</Link></button> */}
                         </> :
                         <>
-                            <button className="btn btn-secondary px-5"><Link to='/login'>Login</Link></button>
+                            <button className="btn bg-slate-700 text-white px-7"><Link to='/login'>Login</Link></button>
                         </>
                 }
 

@@ -52,7 +52,7 @@ const TouristProfile = () => {
             {/* <h2 className="text-3xl font-semibold text-center my-5">User Profile</h2> */}
             <div className="flex flex-col gap-7 justify-center items-center">
                 <div>
-                    <img className="w-24 h-24 rounded-full" src={user?.photoURL} alt="" />
+                    <img className="w-24 h-24 rounded-full" src={user?.photoURL} alt="user" />
                 </div>
                 <div className="flex flex-col items-center">
                     <h2 className="text-4xl font-bold">{user?.displayName}</h2>

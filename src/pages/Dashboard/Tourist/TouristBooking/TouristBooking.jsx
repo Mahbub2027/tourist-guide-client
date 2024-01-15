@@ -78,15 +78,23 @@ const TouristBooking = () => {
                             <td>
                                 {book.price}
                             </td>
-                            <td>
-                                {"In Review"}
+                            <td className="capitalize font-bold">
+                                {book.status}
                             </td>
                             <td>
-                                <button onClick={()=>handleBookingCancel(book._id)} className="btn">Cancel</button>
+                                {
+                                    (book.status === 'accepted' || book.status === 'rejected') ?
+                                    <button disabled onClick={()=>handleBookingCancel(book._id)} className="btn">Cancel</button> :
+                                    <button onClick={()=>handleBookingCancel(book._id)} className="btn">Cancel</button>
+                                }
                             </td>
                             
                             <td>
-                                <button className="btn">Pay</button>
+                                {
+                                    book.status === 'accepted' ?
+                                    <button className="btn">Pay</button> :
+                                    <button disabled className="btn">Pay</button>
+                                }
                             </td>
                             <td>
                                 {
