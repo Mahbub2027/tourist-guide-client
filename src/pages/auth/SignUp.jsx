@@ -35,7 +35,7 @@ const SignUp = () => {
                             icon: "success",
                             title: "Registration successful",
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 2500
                           });
                         navigate('/')
                     }

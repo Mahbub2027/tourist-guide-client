@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import { FaArrowDown } from "react-icons/fa";
 
 const TourPlan = () => {
     const {tour_plan_1, tour_plan_2, tour_plan_3} = useLoaderData();
@@ -15,7 +16,7 @@ const TourPlan = () => {
                                 <AccordionItemButton>
                                 <div className="card  bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-xl">
                                     <div className="card-body px-20">
-                                        <h2 className="card-title ">Plan 1</h2>                                       
+                                        <h2 className="card-title ">Plan 1 <FaArrowDown></FaArrowDown></h2>                                       
                                     </div>
                                 </div>
                                 </AccordionItemButton>
@@ -33,7 +34,7 @@ const TourPlan = () => {
                                 <AccordionItemButton>
                                 <div className="card  bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-xl">
                                     <div className="card-body px-20">
-                                        <h2 className="card-title ">Plan 2</h2>
+                                        <h2 className="card-title ">Plan 2  <FaArrowDown></FaArrowDown></h2>
                                     </div>
                                 </div>
                                 </AccordionItemButton>
@@ -52,7 +53,7 @@ const TourPlan = () => {
                                 <AccordionItemButton>
                                 <div className="card  bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-xl">
                                     <div className="card-body px-20">
-                                        <h2 className="card-title ">Plan 3</h2>                  
+                                        <h2 className="card-title ">Plan 3 <FaArrowDown></FaArrowDown></h2>                  
                                     </div>
                                 </div>
                                 </AccordionItemButton>

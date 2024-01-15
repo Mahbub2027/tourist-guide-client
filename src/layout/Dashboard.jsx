@@ -57,7 +57,7 @@ const Dashboard = () => {
                 <ul>
                     <li><NavLink to='/'> <FaHome></FaHome>
                         Home</NavLink></li>
-                    <li><NavLink to='/allPackages'> <FaList></FaList>
+                    <li><NavLink to='/packageItems'> <FaList></FaList>
                         All Packages</NavLink></li>
                 </ul>
             </div>

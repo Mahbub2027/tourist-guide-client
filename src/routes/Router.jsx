@@ -19,6 +19,8 @@ import AdminProfile from "../pages/Dashboard/Admin/AdminProfile/AdminProfile";
 import AddPackage from "../pages/Dashboard/Admin/AddPackage/AddPackage";
 import GuideProfile from "../pages/Dashboard/TourGuide/TourGuideProfile/GuideProfile";
 import AssignTour from "../pages/Dashboard/TourGuide/AssignTour/AssignTour";
+import GuideProfileDetails from "../pages/HomePages/TravelGuide/MeetTourGuide/GuideProfileDetails/GuideProfileDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -61,6 +63,11 @@ const router = createBrowserRouter([
           loader: ({params})=> fetch(`http://localhost:5000/packages/tour_type/${params.tour_type}`)
         },
         {
+          path: 'guideProfileDeatils/:id',
+          element: <GuideProfileDetails></GuideProfileDetails>,
+          loader: ({params}) => fetch(`http://localhost:5000/tourGuides/${params.id}`)
+        },
+        {
             path: '/login',
             element: <Login></Login>
         },
@@ -73,7 +80,7 @@ const router = createBrowserRouter([
     
     {
       path: 'dashboard',
-      element: <Dashboard></Dashboard>,
+      element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
       children: [
         // admin 
         {

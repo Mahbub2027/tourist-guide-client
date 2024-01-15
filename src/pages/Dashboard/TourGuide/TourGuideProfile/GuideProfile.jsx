@@ -21,29 +21,27 @@ const GuideProfile = () => {
 
     const onSubmit = async (data) => {
         console.log(data)
-        // const imageFile = { image: data.image[0] }
-        // const res = await axiosPublic.post(image_hosting_api, imageFile, {
-        //     headers: {
-        //         'content-type': 'multipart/form-data'
-        //     }
-        // });
-        // if (res.data.success) {
-            const storyInfo = {
+        // if(data.success){
+            const guideInfo = {
                 name: data.name,
-                title: data.title,
-                story: data.story,
-                // date: data.date,
-                // image: res.data.data.display_url
+                email: data.email,
+                image: data.image,
+                education: data.education,
+                skills: data.skills,
+                experience: data.experience,
+                contact: data.contact
+
+
             }
-            const storyRes = await axiosPublic.post('/tourGuide', storyInfo)
-            console.log(storyRes, data)
-            if (storyRes.data.insertedId) {
+            const guideRes = await axiosPublic.post('/tourGuides', guideInfo)
+            console.log(guideRes, data)
+            if (guideRes.data.insertedId) {
                 //
                 reset();
                 Swal.fire({
                     position: "top",
                     icon: "success",
-                    title: `Story is added successfully`,
+                    title: `Profile updated successfully`,
                     showConfirmButton: false,
                     timer: 1500
                 });
@@ -59,7 +57,9 @@ const GuideProfile = () => {
                 <img className="w-28 h-28 rounded-full mb-8" src={user?.photoURL} alt="" />
                 <h2 className="text-4xl text-center font-bold">{user?.displayName}</h2>
                 <p className="text-base ">{user?.email}</p>
-            </div> <hr />
+            </div> 
+            <hr />
+
                 <h2 className="text-3xl font-semibold text-center mt-12">Update Profile</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 {/* name */}
