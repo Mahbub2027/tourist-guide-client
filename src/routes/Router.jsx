@@ -4,7 +4,6 @@ import Home from "../pages/HomePages/Home/Home";
 import Login from "../pages/auth/Login";
 import SignUp from "../pages/auth/SignUp";
 import Blog from "../pages/BlogPages.jsx/Blog";
-// import AllPackages from "../pages/AllPackages/AllPackages";
 import PackageDetails from "../pages/PackageDetails/PackageDetails";
 import EachType from "../pages/HomePages/TourType/EachType";
 import AllStories from "../pages/HomePages/TouristStory/AllStories";
@@ -21,11 +20,13 @@ import GuideProfile from "../pages/Dashboard/TourGuide/TourGuideProfile/GuidePro
 import AssignTour from "../pages/Dashboard/TourGuide/AssignTour/AssignTour";
 import GuideProfileDetails from "../pages/HomePages/TravelGuide/MeetTourGuide/GuideProfileDetails/GuideProfileDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
         {
           path: '/storiesDetails/:id',
           element: <StoryDetails></StoryDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/stories/${params.id}`)
+          loader: ({params}) => fetch(`https://tourist-guide-server-beryl.vercel.app/stories/${params.id}`)
         },
         {
           path: '/packageItems',
@@ -55,17 +56,17 @@ const router = createBrowserRouter([
         {
           path: 'packagesDetails/:id',
           element: <PackageDetails></PackageDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/packages/${params.id}`)
+          loader: ({params}) => fetch(`https://tourist-guide-server-beryl.vercel.app/packages/${params.id}`)
         },
         {
           path: 'eachType/:tour_type',
           element: <EachType></EachType>,
-          loader: ({params})=> fetch(`http://localhost:5000/packages/tour_type/${params.tour_type}`)
+          loader: ({params})=> fetch(`https://tourist-guide-server-beryl.vercel.app/packages/tour_type/${params.tour_type}`)
         },
         {
           path: 'guideProfileDeatils/:id',
           element: <GuideProfileDetails></GuideProfileDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/tourGuides/${params.id}`)
+          loader: ({params}) => fetch(`https://tourist-guide-server-beryl.vercel.app/tourGuides/${params.id}`)
         },
         {
             path: '/login',

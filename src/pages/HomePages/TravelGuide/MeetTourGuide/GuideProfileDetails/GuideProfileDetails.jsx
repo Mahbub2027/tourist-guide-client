@@ -1,26 +1,39 @@
-// import { useQuery } from "@tanstack/react-query";
-// import useAxiosPublic from "../../../../../hooks/useAxiosPublic";
+import useAxiosPublic from "../../../../../hooks/useAxiosPublic";
+import { Rating } from "@smastrom/react-rating";
+import '@smastrom/react-rating/style.css'
 import useAuth from "../../../../../hooks/useAuth";
 import { useForm } from "react-hook-form";
 import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
 const GuideProfileDetails = () => {
     const { name, image, skills, experience, contact, education } = useLoaderData();
-    const {user} = useAuth();
-    const { register,reset, handleSubmit } = useForm();
-    const onSubmit = async(data) =>{
+    const { user } = useAuth();
+    const axiosPublic = useAxiosPublic();
+    const [rating, setRating] = useState(0);
+    const { register, reset, handleSubmit } = useForm();
+    const onSubmit = async (data) => {
         console.log(data)
+        const feedbackInfo = {
+            rating: rating,
+            email: data.email,
+            feedback: data.feedback
+        }
+        const res = await axiosPublic.post('/feedbacks', feedbackInfo)
+        console.log(res.data)
+        if (res.data.insertedId) {
+            reset();
+            Swal.fire({
+                title: 'Feedback Successfully Send',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 1500,
+
+            })
+        }
     }
-    
-    // const axiosPublic = useAxiosPublic();
-    // const {data: guides=[]} = useQuery({
-    //     queryKey: ['guide', user?._id],
-    //     queryFn: async()=>{
-    //         const res = await axiosPublic.get(`/tourGuides/${user._id}`)
-    //         return res.data;
-    //     }
-    // })
-    
+
 
     return (
         <div className="w-10/12 mx-auto my-8">
@@ -36,44 +49,52 @@ const GuideProfileDetails = () => {
                 </div>
             </div>
 
-            <h2 className="text-2xl font-semibold mt-16">Give feedback </h2>
+            <h2 className="text-3xl font-semibold mt-16 mb-5">Ratings & Reviews</h2>
             <div>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                {/* name */}
-                
+                <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+                    {/* Rating */}
+
+                    <label className="form-control w-full ">
+                        <div className="label">
+                            <span className="label-text font-semibold">Please Rate your experience</span>
+                        </div>
+                        <Rating style={{ maxWidth: 180 }}
+                            value={rating}
+                            onChange={setRating}>
+
+                        </Rating>
+                    </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text font-semibold">Email</span>
                         </div>
                         <input {...register("email")}
                             type="text"
-                            value={user?.email}
-                            placeholder="Type here"
+
+                            placeholder="enter your email"
                             className="input input-bordered w-full " />
                     </label>
 
                     <label className="form-control w-full ">
                         <div className="label">
-                            <span className="label-text  font-semibold">Comment</span>
+                            <span className="label-text  font-semibold">Feedback</span>
                         </div>
-                        <textarea {...register("title")}  
-                        className="border-2 rounded-lg"
-                        cols="20" rows="5"></textarea>
-                        {/* <input {...register("title")}
-                            type="text"
-                            placeholder="story title"
-                            className="input input-bordered w-full " /> */}
+                        <textarea {...register("feedback")}
+                            className="border-2 rounded-lg"
+                            placeholder="   share your experience"
+                            cols="20" rows="5"></textarea>
 
                     </label>
+                    
                     {
                         user ? <>
-                        <button className=" p-3 rounded-lg w-full my-8 bg-slate-700 font-semibold text-white">
-                            Post
-                        </button></> :
-                        <>
-                        <button disabled className=" p-3 rounded-lg w-full my-8 bg-slate-200 text-black font-semibold">
-                            Post
-                        </button></>
+                            <button className=" p-3 rounded-lg w-full my-8 bg-slate-700 font-semibold text-white">
+                                Send
+                            </button></> :
+                            <>
+                                <button disabled className=" p-3 rounded-lg w-full my-8 bg-slate-200 text-black font-semibold">
+                                    Send
+                                </button></>
                     }
                 </form>
             </div>

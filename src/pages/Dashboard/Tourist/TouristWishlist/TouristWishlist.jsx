@@ -4,6 +4,7 @@ import useAuth from "../../../../hooks/useAuth";
 import { FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const TouristWishlist = () => {
     const axiosSecure = useAxiosSecure();
@@ -48,6 +49,9 @@ const TouristWishlist = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
+             <Helmet>
+                <title>InfiniteTour | My wishlists</title>
+            </Helmet>
             <h2 className="text-3xl font-bold text-center mb-10">My Wishlists</h2>
             <div className="overflow-x-auto">
                 <table className="table">

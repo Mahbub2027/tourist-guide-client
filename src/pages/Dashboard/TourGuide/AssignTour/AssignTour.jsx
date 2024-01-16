@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../../hooks/useAuth";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AssignTour = () => {
     const { user } = useAuth();
@@ -76,6 +77,9 @@ const AssignTour = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
+             <Helmet>
+                <title>InfiniteTour | Assign Tours</title>
+            </Helmet>
             <h2 className="text-3xl font-bold text-center mb-8">My Assign Tours</h2>
             {
 

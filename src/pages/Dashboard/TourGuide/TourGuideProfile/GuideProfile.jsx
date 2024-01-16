@@ -4,6 +4,7 @@ import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 const GuideProfile = () => {
     const { user } = useAuth();
@@ -53,6 +54,9 @@ const GuideProfile = () => {
 
     return (
         <div className="w-10/12 mx-auto my-10">
+             <Helmet>
+                <title>InfiniteTour | Guide Profile</title>
+            </Helmet>
             <div className="flex flex-col  justify-center items-center mb-4">
                 <img className="w-28 h-28 rounded-full mb-8" src={user?.photoURL} alt="" />
                 <h2 className="text-4xl text-center font-bold">{user?.displayName}</h2>

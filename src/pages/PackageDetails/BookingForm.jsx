@@ -55,28 +55,6 @@ const BookingForm = () => {
                      if (result.isConfirmed) {
                         navigate('/dashboard/touristBooking')
                      }})
-                   
-                    // .then((result) => {
-                    //     if (result.isConfirmed) {
-
-                    //                     refetch();
-                    //                     Swal.fire({
-                    //                         title: "Booked",
-                    //                         text: "Booking Successfull",
-                    //                         icon: "success"
-                    //                     });
-
-                    //                 }
-                    //             });
-
-                    // Swal.fire({
-                    //     position: "top",
-                    //     icon: "success",
-                    //     title: "Booking Successfull",
-                    //     showConfirmButton: false,
-                    //     timer: 1500
-                    // });
-                    // refetch the cart 
 
                 }
                 
@@ -154,16 +132,9 @@ const BookingForm = () => {
                                     {guide?.name}
                                 </option>)
                             }
-                            
-                            
-                            {/* <option value="sakib">Sakib</option>
-                            <option value="mahfuz">Mahfuz</option>
-                            <option value="abid">Abid</option>
-                            <option value="tahmid">Tahmid</option> */}
-
-
                         </select>
                     </label>
+
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text">Select Date*</span>

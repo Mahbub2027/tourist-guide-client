@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import GoogleLogin from "../sharedPages/SocialLinks/GoogleLogin";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
     const {register,handleSubmit,reset, formState: { errors },} = useForm()
@@ -57,6 +58,9 @@ const SignUp = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200">
+             <Helmet>
+                <title>InfiniteTour | SignUp</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row gap-5">
                 <div className="w-full md:w-1/2 mr-14 text-center ">
                     <img className="w-2/3 mx-auto md:w-full" src="https://i.ibb.co/rm09PtM/2757111.webp" alt="" />

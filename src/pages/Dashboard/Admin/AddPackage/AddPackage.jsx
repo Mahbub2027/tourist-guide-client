@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const AddPackage = () => {
     const { register, reset, handleSubmit } = useForm();
@@ -35,6 +36,9 @@ const AddPackage = () => {
     }
     return (
         <div className="w-11/12 mx-auto my-10">
+             <Helmet>
+                <title>InfiniteTour | Add Package</title>
+            </Helmet>
             <h2 className="text-3xl text-center font-semibold mb-10">Add package</h2>
             <div>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

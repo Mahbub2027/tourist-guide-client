@@ -7,6 +7,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import TourPlan from "./TourPlan";
 import BookingForm from "./BookingForm";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 
 const PackageDetails = () => {
     const axiosPublic = useAxiosPublic();
@@ -22,6 +23,9 @@ const PackageDetails = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>InfiniteTour | Package Details</title>
+            </Helmet>
             <div className="">
                 <Swiper
                     slidesPerView={'auto'}

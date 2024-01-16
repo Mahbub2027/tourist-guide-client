@@ -2,6 +2,7 @@
 import Swal from "sweetalert2";
 import useBookings from "../../../../hooks/useBookings";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const TouristBooking = () => {
     const [bookings, refetch] = useBookings();
@@ -38,6 +39,9 @@ const TouristBooking = () => {
     }
     return (
         <div className="w-11/12 mx-auto my-8">
+             <Helmet>
+                <title>InfiniteTour | My Bookings</title>
+            </Helmet>
             <h2 className="text-3xl font-bold text-center my-8">My Bookings {bookings.length}</h2>
             {/* head */}
             <div  className="overflow-x-auto">
@@ -98,8 +102,10 @@ const TouristBooking = () => {
                             </td>
                             <td>
                                 {
-                                    (index+1).length > 3  ? <><button className="btn">Apply</button></> :
-                                    <button disabled className="btn">Apply</button>
+                                      index < 3 ?<button disabled  className="btn">Apply</button> : 
+                                      <button   className="btn">Apply</button>
+                                    // ? <><button   className="btn">Apply</button></> :
+                                    // <><button disabled className="btn">Apply</button></>
                                 }
                                 
                             </td>

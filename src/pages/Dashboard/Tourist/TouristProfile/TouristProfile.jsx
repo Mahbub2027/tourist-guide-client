@@ -1,9 +1,8 @@
 import { useForm } from "react-hook-form";
 import useAuth from "../../../../hooks/useAuth";
-// import { useState } from "react";
-// import DatePicker from "react-datepicker";
 import useAxiosPublic from "../../../../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const image_hosting_key= import.meta.env.VITE_image_hosting_key;
@@ -49,6 +48,9 @@ const TouristProfile = () => {
 
     return (
         <div className="w-11/12 mx-auto my-8">
+             <Helmet>
+                <title>InfiniteTour | My Profile</title>
+            </Helmet>
             {/* <h2 className="text-3xl font-semibold text-center my-5">User Profile</h2> */}
             <div className="flex flex-col gap-7 justify-center items-center">
                 <div>

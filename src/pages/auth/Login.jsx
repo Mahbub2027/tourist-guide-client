@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import GoogleLogin from "../sharedPages/SocialLinks/GoogleLogin";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const {loginUser} = useAuth();
@@ -38,6 +39,9 @@ const Login = () => {
     // }
     return (
         <div className="hero min-h-screen bg-base-200">
+             <Helmet>
+                <title>InfiniteTour | Login</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row gap-5">
                 <div className="w-full md:w-1/2 mr-14 text-center ">
                     {/* <h1 className="text-5xl font-bold">Login now!</h1> */}

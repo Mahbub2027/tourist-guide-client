@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 
 const AllStories = () => {
     const axiosPublic = useAxiosPublic();
@@ -14,6 +15,9 @@ const AllStories = () => {
     })
     return (
         <div className="w-full md:w-1/2 mx-auto my-10 grid grid-cols-1 gap-y-7">
+             <Helmet>
+                <title>InfiniteTour | All Stories</title>
+            </Helmet>
             <h2 className="text-4xl font-semibold text-center my-8">All Stories</h2>
             
                 {
