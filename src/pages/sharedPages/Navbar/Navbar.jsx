@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <li className="btn-disabled"><span>{user?.displayName}</span></li>
                                     <li className="btn-disabled"><span>{user?.email}</span></li>
                                     <hr />
-                                    <li><Link to='/dashboard/profile'>Dashboard</Link></li>
+                                    <li><Link to='/dashboard'>Dashboard</Link></li>
                                     <li><button onClick={handleLogOut} className=""><Link>Logout</Link></button></li> 
                                 </ul>
                             </details>

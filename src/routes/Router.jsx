@@ -85,7 +85,7 @@ const router = createBrowserRouter([
       children: [
         // admin 
         {
-          path: 'profile',
+          path: 'adminProfile',
           element: <AdminProfile></AdminProfile>
         },
         {
@@ -98,7 +98,7 @@ const router = createBrowserRouter([
         },
         // tourist
         {
-          path: 'profile',
+          path: 'touristProfile',
           element: <TouristProfile></TouristProfile>
         },
         {
@@ -111,7 +111,7 @@ const router = createBrowserRouter([
         },
         // tour guide
         {
-          path: 'profile',
+          path: 'guideProfile',
           element: <GuideProfile></GuideProfile>
         },
         {
