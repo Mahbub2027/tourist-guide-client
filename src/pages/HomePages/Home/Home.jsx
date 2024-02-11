@@ -3,6 +3,7 @@ import Banner from "../Banner/Banner";
 import TourType from "../TourType/TourType";
 import TouristStory from "../TouristStory/TouristStory";
 import TravelGuide from "../TravelGuide/TravelGuide";
+import PopularDestination from "../PopularDestination/PopularDestination";
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <TravelGuide></TravelGuide>
             <TourType></TourType>
+            <PopularDestination></PopularDestination>
             <TouristStory></TouristStory>
         </div>
     );

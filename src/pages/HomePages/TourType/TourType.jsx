@@ -12,8 +12,8 @@ const TourType = () => {
         }
     })
     return (
-        <div className="w-10/12 mx-auto my-10">
-            <h2 className="text-4xl font-semibold text-center">Discover Your Perfect Journey</h2>
+        <div className="w-10/12 mx-auto my-20">
+            <h2 className="text-4xl font-bold text-center">Discover Your Perfect Journey</h2>
             <p className="text-center text-base my-2"> Explore Beauty in Hills, Beaches, Forests, and More with Our Varied Tour Offerings</p>
             <div className="flex flex-wrap justify-center gap-7">
                 {

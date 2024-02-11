@@ -21,6 +21,7 @@ import AssignTour from "../pages/Dashboard/TourGuide/AssignTour/AssignTour";
 import GuideProfileDetails from "../pages/HomePages/TravelGuide/MeetTourGuide/GuideProfileDetails/GuideProfileDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PopularDestination from "../pages/HomePages/PopularDestination/PopularDestination";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +68,10 @@ const router = createBrowserRouter([
           path: 'guideProfileDeatils/:id',
           element: <GuideProfileDetails></GuideProfileDetails>,
           loader: ({params}) => fetch(`https://tourist-guide-server-beryl.vercel.app/tourGuides/${params.id}`)
+        },
+        {
+          path: 'popularDestination',
+          element: <PopularDestination></PopularDestination>
         },
         {
             path: '/login',
